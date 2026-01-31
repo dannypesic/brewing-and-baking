@@ -1,8 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    "brewingandbaking:cherry",
-    "brewingandbaking:cherry",
+    "brewingandbaking:cherries",
+    "brewingandbaking:cherries",
     "minecraft:sugar"
   ],
   "result": {

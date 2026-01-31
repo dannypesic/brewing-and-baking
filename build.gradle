@@ -19,6 +19,7 @@ group = mod_group_id
 
 repositories {
     // Add here additional repositories if required by some of the dependencies below.
+    maven { url = "https://maven.blamejared.com" }
 }
 
 base {
@@ -118,6 +119,12 @@ dependencies {
     // compileOnly "mezz.jei:jei-${mc_version}-neoforge-api:${jei_version}"
     // We add the full version to localRuntime, not runtimeOnly, so that we do not publish a dependency on it
     // localRuntime "mezz.jei:jei-${mc_version}-neoforge:${jei_version}"
+    // JEI (dev only)
+    compileOnly "mezz.jei:jei-1.21.11-common-api:27.3.0.12"
+    compileOnly "mezz.jei:jei-1.21.11-neoforge-api:27.3.0.12"
+
+    // load JEI in dev runs (so it actually exists at runtime)
+    localRuntime "mezz.jei:jei-1.21.11-neoforge:27.3.0.12"
 
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar

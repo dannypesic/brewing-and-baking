@@ -36,7 +36,6 @@ public class Config {
     private static boolean validateItemName(final Object obj) {
         if (!(obj instanceof String itemName)) return false;
 
-        // Safer than parse(): doesn't throw on invalid strings.
         Identifier id = Identifier.tryParse(itemName);
         return id != null && BuiltInRegistries.ITEM.containsKey(id);
     }

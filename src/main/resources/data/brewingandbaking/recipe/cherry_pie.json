@@ -3,12 +3,12 @@
   "pattern": ["SES", "CCC", "WWW"],
   "key": {
     "W": "minecraft:wheat",
-    "C": "brewingandbaking:cherry",
+    "C": "brewingandbaking:cherries",
     "S": "minecraft:sugar",
-    "E": "minecraft:egg"
+    "E": "minecraft:#eggs"
   },
   "result": {
     "id": "brewingandbaking:cherry_pie",
-    "count": 1
+    "count": 2
   }
 }
