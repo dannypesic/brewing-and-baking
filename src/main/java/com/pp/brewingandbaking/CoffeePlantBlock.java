@@ -58,7 +58,7 @@ public class CoffeePlantBlock extends BushBlock { // BushBlock extends bonemeala
             popResource(level, pos, new ItemStack(ModItems.COFFEE_BEANS.get(), dropCount));
 
             // Reset age
-            level.setBlock(pos, state.setValue(AGE, 1), 2);
+            level.setBlock(pos, state.setValue(AGE, 2), 2); //Check
             level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
 
             return InteractionResult.SUCCESS;

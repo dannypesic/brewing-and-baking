@@ -33,7 +33,7 @@ public final class CoffeeCreativeTabFix {
         removeCoffeeFromView(event, event.getParentEntries(), CreativeModeTab.TabVisibility.PARENT_TAB_ONLY);
         removeCoffeeFromView(event, event.getSearchEntries(), CreativeModeTab.TabVisibility.SEARCH_TAB_ONLY);
 
-        ItemStack anchor = new ItemStack(ModItems.ROASTED_COFFEE_BEANS.get());
+        ItemStack anchor = new ItemStack(Items.HONEY_BOTTLE);
 
         // Make separate stacks for parent/search so we dont reuse the same instance
         ItemStack coffeeParent = ModBrewing.makeCoffeePotionStack();

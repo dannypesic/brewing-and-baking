@@ -45,18 +45,6 @@ private static void addCreative(BuildCreativeModeTabContentsEvent event) {
 
         event.insertAfter(
             new ItemStack(Items.HONEY_BOTTLE),
-            new ItemStack(ModItems.COFFEE_BEANS.get()),
-            CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
-        );
-
-        event.insertAfter(
-            new ItemStack(ModItems.COFFEE_BEANS.get()),
-            new ItemStack(ModItems.ROASTED_COFFEE_BEANS.get()),
-            CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
-        );
-
-        event.insertAfter(
-            new ItemStack(ModItems.ROASTED_COFFEE_BEANS.get()),
             ModBrewing.makeCoffeePotionStack(),
             CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
         );
@@ -70,11 +58,32 @@ private static void addCreative(BuildCreativeModeTabContentsEvent event) {
     // Ingredients tab
     if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
 
-        event.insertAfter(new ItemStack(Items.WHEAT),
-                new ItemStack(ModItems.CACAO_NIBS.get()),
-                CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+        event.insertAfter(
+            new ItemStack(Items.WHEAT),
+            new ItemStack(ModItems.COFFEE_BEANS.get()),
+            CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
         );
 
+        event.insertAfter(
+            new ItemStack(ModItems.COFFEE_BEANS.get()),
+            new ItemStack(ModItems.ROASTED_COFFEE_BEANS.get()),
+            CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+        );
+
+        event.insertAfter(new ItemStack(ModItems.ROASTED_COFFEE_BEANS.get()),
+            new ItemStack(ModItems.CACAO_NIBS.get()),
+            CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+        );
+
+    }
+
+    // Nature Tab
+    if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+        event.insertAfter(
+            new ItemStack(Items.SWEET_BERRIES),
+            new ItemStack(ModItems.COFFEE_BEANS.get()),
+            CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+        );
     }
 }
 }
