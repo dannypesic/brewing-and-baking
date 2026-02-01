@@ -53,7 +53,7 @@ public class CoffeePlantBlock extends BushBlock { // BushBlock extends bonemeala
         int age = state.getValue(AGE);
 
         // Harvest when mature
-        if (age >= 2) {
+        if (age >= 3) {
             int dropCount = 1 + level.random.nextInt(2); // 1–2 beans
             popResource(level, pos, new ItemStack(ModItems.COFFEE_BEANS.get(), dropCount));
 
