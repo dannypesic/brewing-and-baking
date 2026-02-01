@@ -118,9 +118,9 @@ public void performBonemeal(ServerLevel level, RandomSource rand, BlockPos pos, 
 }
 
 static {
-    SHAPE_STAGE_0 = Block.column((double)10.0F, (double)0.0F, (double)11.0F);
-    SHAPE_STAGE_1 = Block.column((double)12.0F, (double)0.0F, (double)14.0F);
-    SHAPE_DEFAULT = Block.column((double)14.0F, (double)0.0F, (double)14.0F);
+    SHAPE_STAGE_0 = Block.column(10.0D, 0.0D, 11.0D);
+    SHAPE_STAGE_1 = Block.column(12.0D, 0.0D, 14.0D);
+    SHAPE_DEFAULT = Block.column(14.0D, 0.0D, 14.0D);
 }
 
 }
