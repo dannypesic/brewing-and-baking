@@ -18,6 +18,8 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 
 
 public class CoffeePlantBlock extends BushBlock { // BushBlock extends bonemealability of BoneMealableBlock
@@ -56,6 +58,7 @@ public class CoffeePlantBlock extends BushBlock { // BushBlock extends bonemeala
         if (age >= 3) {
             int dropCount = 1 + level.random.nextInt(2); // 1–2 beans
             popResource(level, pos, new ItemStack(ModItems.COFFEE_BEANS.get(), dropCount));
+            level.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
 
             // Reset age
             level.setBlock(pos, state.setValue(AGE, 2), 2); //Check
